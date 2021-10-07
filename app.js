@@ -122,12 +122,12 @@ search.addEventListener("input", function(){
 
 // Important notes 
 function imp(card, index){
-   console.log(card);
+   //console.log(card);
 
    let notes = localStorage.getItem("notes");
    notesObj = JSON.parse(notes);
 
-   console.log(index)
+   //console.log(index)
 
    if(card.classList.contains("imp")){
       card.classList.remove("imp");
