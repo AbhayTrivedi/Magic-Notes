@@ -17,11 +17,13 @@ addBtn.addEventListener("click", function() {
    let addTitle = document.getElementById("addTitle");
    let notes = localStorage.getItem("notes");
 
-   if (notes == null)
+   if (notes == null){
       notesObj = [];
-   else
+      alert("Double click on notes to mark as important!");
+   }
+   else{
       notesObj = JSON.parse(notes);
-
+   }
    
    if(addTitle.value == ""){
       addTitle.value = "Untitled Note " + num;
