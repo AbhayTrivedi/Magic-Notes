@@ -23,6 +23,7 @@ footer.container-fluid{
    text-align: center;
    padding: 0.5%;
    font-weight: 500;
+   position: absolute;
 }
 
 footer.container-fluid:hover{
