@@ -1,7 +1,28 @@
 
+.background{
+   background-image: url(images/background-img.jpg);
+}
+
+h1{
+   display: inline-block;
+   background-color: rgba(255, 255, 255, 0.6);
+   border-radius: 8px;
+  -webkit-backdrop-filter: blur(10px);
+   backdrop-filter: blur(10px);
+   margin-bottom: 0;
+   padding: 5px 20px;
+}
+
 .container{
    padding-bottom: 10%;
 }
+
+.hero {
+   background: linear-gradient(#F8F8F8, #F8F8F8),
+     radial-gradient(#F8F8F8 25%, transparent) center/50% 90% no-repeat, var(
+         --pattern
+       ) center/cover no-repeat;
+ }
 
 .card{
    margin-top: 3%;
@@ -9,9 +30,9 @@
 }
 
 .imp{
-   background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+   background: url(images/important-img.jpeg);
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 
 .colors{
@@ -26,7 +47,7 @@ footer.container-fluid{
    position: absolute;
 }
 
-footer.container-fluid:hover{
-   background: linear-gradient(90deg, #fc00ff, #00dbde);
+.noteCard{
+   border-radius: 12px;
 }
 
