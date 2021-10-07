@@ -19,7 +19,7 @@ addBtn.addEventListener("click", function() {
 
    if (notes == null){
       notesObj = [];
-      alert("Double click on notes to mark as important!");
+      alert("Double click/tap on notes to mark as important!");
    }
    else{
       notesObj = JSON.parse(notes);
