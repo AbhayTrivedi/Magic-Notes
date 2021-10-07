@@ -3,13 +3,13 @@ var num = 1;
 let addBtn = document.getElementById("addBtn");
 showNotes();
 
-if(localStorage.getItem("bg") == true)
+if(localStorage.getItem("bg") == 1)
    document.body.classList.add("background");
 
-// if(localStorage.getItem("color")){
-//    document.getElementsByClassName("navbar")[0].classList.add("colors");
-//    document.getElementsByTagName("footer")[0].classList.add("colors");
-// }
+if(localStorage.getItem("color") == 1){
+   document.getElementsByClassName("navbar")[0].classList.add("colors");
+   document.getElementsByTagName("footer")[0].classList.add("colors");
+}
 
 // function to add notes 
 addBtn.addEventListener("click", function() {
@@ -109,7 +109,8 @@ search.addEventListener("input", function(){
    let notecards = document.getElementsByClassName("noteCard");
    Array.from(notecards).forEach(function(element){
       let cardTxt = element.getElementsByTagName("P")[0].innerText.toLowerCase();
-      if(cardTxt.includes(inputVal))
+      let cardTitle = element.getElementsByTagName("h5")[0].innerText.toLowerCase();
+      if(cardTxt.includes(inputVal) || cardTitle.includes(inputVal))
          element.style.display = "block";
       else
          element.style.display = "none";
@@ -152,12 +153,12 @@ logo.addEventListener("click", function(){
    if(navbar.classList.contains("colors")){
       navbar.classList.remove("colors");
       footer.classList.remove("colors");
-      localStorage.setItem("color", false);
+      localStorage.setItem("color", 0);
    }
    else{
       navbar.classList.add("colors");
       footer.classList.add("colors");
-      localStorage.setItem("color", true);
+      localStorage.setItem("color", 1);
    }
 });
 
@@ -168,11 +169,11 @@ bg.addEventListener("click", function(){
 
    if(body.classList.contains("background")){
       body.classList.remove("background");
-      localStorage.setItem("bg", false);
+      localStorage.setItem("bg", 0);
    }
    else{
       body.classList.add("background");
-      localStorage.setItem("bg", true);
+      localStorage.setItem("bg", 1);
    }
 
 });
